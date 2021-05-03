@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Blog Posts</h1>
+{% for post in post_list %}
+<div>
+    <a href="{{ post.get_absolute_url }}"><h2>{{ post.title }}</h3></a>
+    <h5>{{ post.subtitle }}</h5>
+    <i>Posted by: {{ post.get_username }}</i><br></br>
+    <b>Published: {{ post.date_added }}</b>
+    <p>Visibility: {{ post.pub_or_priv }}</p>
+</div>
+<br></br>
+{% endfor %}
+{% endblock %}

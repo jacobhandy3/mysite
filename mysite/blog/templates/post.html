@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<a href="/blog"><-- Back to list</a><br></br>
+
+<h1>{{ post.title }}</h2>
+<div>
+    <h4>{{ post.subtitle }}</h4>
+    <i>Posted by: {{ post.get_username }}</i>
+    <br></br>
+    <p>{{ post.content }}</p>
+    <b>Published: {{ post.date_added }}</b>
+    <p>Visibility: {{ post.pub_or_priv }}</p>
+</div>
+{% endblock %}

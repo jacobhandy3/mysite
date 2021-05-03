@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Your Tasks</h1>
+{% for task in tasks %}
+<div>
+    <a href="{{ task.get_absolute_url }}"><h3>{{ task.title }}</h3></a>
+    <h4>Priority: {{ task.describePriority }}</h4>
+    <p>{{ task.details }}</p>
+    <h5>Due: {{ task.date_due }}</h5>
+</div>
+<br></br>
+{% endfor %}
+{% endblock %}

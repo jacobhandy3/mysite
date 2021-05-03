@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<a href="/todo"><-- Back to list</a><br></br>
+
+<h2>{{ task.title }}</h2>
+<div>
+    <h4>Priority: {{ task.describePriority }}</h4>
+    <p>{{ task.details }}</p>
+    <h4>Due: {{ task.date_due }}</h4>
+    <h4>Remaining: {{ task.timeRemaining }}</h4>
+</div>
+{% endblock %}
